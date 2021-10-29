@@ -22,9 +22,9 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.Toast;
-import com.havoc.support.preferences.CustomSeekBarPreference;
+import org.havoc.device.DeviceSettings.CustomSeekBarPreference;
 
-import com.havoc.support.R;
+import org.havoc.device.DeviceSettings.R;
 
 public class VibratorStrengthPreference extends CustomSeekBarPreference {
 

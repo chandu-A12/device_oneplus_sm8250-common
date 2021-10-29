@@ -47,8 +47,8 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.TwoStatePreference;
-import com.havoc.support.preferences.CustomSeekBarPreference;
-import com.havoc.support.preferences.SwitchPreference;
+import org.havoc.device.DeviceSettings.CustomSeekBarPreference;
+import org.havoc.device.DeviceSettings.SwitchPreference;
 
 import org.havoc.device.DeviceSettings.FileUtils;
 import org.havoc.device.DeviceSettings.Doze.DozeSettingsActivity;
