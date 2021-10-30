@@ -24,7 +24,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
 
 # Inherit packages from vendor/oneplus/addons/camera
-$(call inherit-product, vendor/oneplus/addons/camera/camera-vendor.mk)
+#$(call inherit-product, vendor/oneplus/addons/camera/camera-vendor.mk)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -37,7 +37,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-havoc
+    $(LOCAL_PATH)/overlay-aosp
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -46,6 +46,10 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # VNDK
 PRODUCT_USE_PRODUCT_VNDK_OVERRIDE := true
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
+
+PRODUCT_BOARD_PLATFORM := kona
+PRODUCT_USES_QCOM_HARDWARE := true
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -98,8 +102,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
-    vendor/havoc/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -485,8 +488,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml
 
 # Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oneplus_kona
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.touch@1.0-service.oneplus_kona
 
 # tri-state-key
 PRODUCT_PACKAGES += \
@@ -554,5 +557,5 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
