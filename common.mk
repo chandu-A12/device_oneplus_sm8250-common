@@ -299,12 +299,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey
 
-# Default Sounds
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.ringtone=Ganymede.ogg \
-    ro.config.notification_sound=End_note.ogg \
-    ro.config.alarm_alert=Argon.ogg
-
 # Dolby
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/dax-default.xml
