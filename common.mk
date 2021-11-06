@@ -414,13 +414,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/odm/odm_feature_list:$(TARGET_COPY_OUT_ODM)/etc/odm_feature_list
 
-# OnePlus
-PRODUCT_PACKAGES += \
-    oneplus-fwk.oneplus_kona
-
-PRODUCT_BOOT_JARS += \
-    oneplus-fwk.oneplus_kona
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
@@ -553,5 +546,6 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
-#PRODUCT_BOOT_JARS += \
-#    WfdCommon
+# Inherit extras stuff
+-include vendor/oneplus/extras/OnePlus-fwk.mk
+-include vendor/oneplus/extras/WfdCommon.mk
